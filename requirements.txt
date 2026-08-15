@@ -1,0 +1,8 @@
+# Runtime dependencies for the Python engine.
+#
+#     python3 -m pip install -r requirements.txt
+#
+# Everything else the engine uses (sqlite3, csv, json, urllib, gzip, ...) is in
+# the Python standard library, so this list is deliberately tiny.
+
+requests>=2.31

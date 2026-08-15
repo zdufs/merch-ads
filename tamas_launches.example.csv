@@ -1,0 +1,3 @@
+keyword,asin,match,bid,budget
+example keyword one,B0EXAMPLE1,phrase,0.25,5
+example keyword two,B0EXAMPLE2,broad,0.25,5
