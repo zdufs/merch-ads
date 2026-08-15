@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://merch-ads.local/demand_feed.schema.json",
+  "title": "Merch Ads Demand Feed",
+  "description": "Contract between the Amazon Ads automation tool and MerchPirate. Written every ~2 days to Ads/outputs/demand_feed.json. keyword_seeds = proven-converting customer searches (make NEW designs); proven_sellers = top-earning ASINs (make VARIATIONS).",
+  "type": "object",
+  "required": ["schema", "generated", "keyword_seeds", "proven_sellers"],
+  "additionalProperties": true,
+  "properties": {
+    "schema": { "const": "merchads.demand_feed/v1" },
+    "generated": { "type": "string", "description": "Snapshot date (YYYY-MM-DD) of the source data." },
+    "source": { "type": "string" },
+    "notes": { "type": "string" },
+    "keyword_seeds": {
+      "type": "array",
+      "description": "New-design ideas. Make designs targeting these phrases. Order by `orders` desc for priority.",
+      "items": {
+        "type": "object",
+        "required": ["term", "product_type", "orders"],
+        "additionalProperties": true,
+        "properties": {
+          "term": { "type": "string", "description": "Customer search phrase = design intent. Feed to MerchPirate prompt generation." },
+          "niche": { "type": "string", "description": "Source ad campaign name (context only; free text, e.g. 'Lotto 2')." },
+          "product_type": { "type": "string", "description": "Merch export product type. See known values in demand_feed.context.md. Unknown -> treat as standard_tshirt." },
+          "orders": { "type": "integer", "minimum": 0, "description": "Ad-attributed orders (demand strength)." },
+          "sales": { "type": "number", "minimum": 0 },
+          "acos": { "type": "number", "minimum": 0, "description": "Ad cost of sale (0.07 = 7%)." },
+          "cvr": { "type": "number", "minimum": 0, "description": "orders/clicks." }
+        }
+      }
+    },
+    "proven_sellers": {
+      "type": "array",
+      "description": "Top-earning live ASINs. Route to MerchPirate prompt-recovery to make variations.",
+      "items": {
+        "type": "object",
+        "required": ["asin", "action"],
+        "additionalProperties": true,
+        "properties": {
+          "asin": { "type": "string" },
+          "title": { "type": "string" },
+          "product_type": { "type": "string" },
+          "brand": { "type": "string" },
+          "royalty_last30": { "type": "number", "minimum": 0 },
+          "sales_last30": { "type": "integer", "minimum": 0 },
+          "action": { "type": "string", "enum": ["variation"], "description": "Currently always 'variation'." }
+        }
+      }
+    }
+  }
+}
