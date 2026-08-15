@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Setup help
+    url: https://github.com/zdufs/merch-ads/blob/main/docs/SETUP.md
+    about: Install and credentials, step by step.
+  - name: Troubleshooting
+    url: https://github.com/zdufs/merch-ads/blob/main/docs/TROUBLESHOOTING.md
+    about: Start here when something breaks or goes quiet.
+  - name: Report a security problem
+    url: https://github.com/zdufs/merch-ads/security/advisories/new
+    about: Private. Do not open a public issue for security problems.
+  - name: Questions and ideas
+    url: https://github.com/zdufs/merch-ads/discussions
+    about: For anything that is not a bug report.

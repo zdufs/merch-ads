@@ -1,0 +1,5 @@
+{
+  "_doc": "KDP campaign-builder operator config. Copy to kdp_config.json and fill in. Both keys are optional and default to empty.",
+  "held_out_opener_asins": [],
+  "series_pen_overrides": {}
+}
