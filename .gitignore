@@ -1,0 +1,50 @@
+# Secrets — never commit
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Local data / logs / generated outputs
+*.sqlite
+*.db
+*.log
+outputs/
+KILL
+NO_DISCORD
+
+# MerchFlow catalog exports (multi-GB, regenerated daily)
+export_products_*.csv
+
+# Xcode / app build products
+build/
+DerivedData/
+MerchAds.app/
+Merch Ads.app/
+*.xcuserdatad/
+xcuserdata/
+.DS_Store
+dist/
+
+# User-authored DSL rules (data, not code)
+rule_defs/
+
+# KDP per-book economics config (user data)
+kdp_books.json
+
+# KDP campaign-builder operator config (held-out openers, pen names)
+kdp_config.json
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# Fetched KDP book titles cache (regenerable via appctl kdp-titles --refresh)
+kdp_titles.json
+
+# Operator data — your own catalog, not code. Seeded from the shipped
+# *.example.* files on first use. Keep these out of the repo.
+seasonal.json
+# Campaign launch lists: real ASINs, one row per design you are launching.
+*_launches.csv
+!*_launches.example.csv
