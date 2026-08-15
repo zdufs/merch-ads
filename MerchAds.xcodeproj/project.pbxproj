@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXFileReference section */
+		PA000000000000000000000C /* MerchAds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MerchAds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		PT000000000000000000000C /* MerchAdsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MerchAdsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		PA00000000000000000000E1 /* Exceptions for "MerchAds" folder in "MerchAds" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = PA0000000000000000000001 /* MerchAds */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		PA000000000000000000000D /* MerchAds */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				PA00000000000000000000E1 /* Exceptions for "MerchAds" folder in "MerchAds" target */,
+			);
+			path = MerchAds;
+			sourceTree = "<group>";
+		};
+		PT000000000000000000000D /* MerchAdsTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MerchAdsTests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		PA0000000000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PT0000000000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXContainerItemProxy section */
+		PT0000000000000000000007 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = PA00000000000000000000FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = PA0000000000000000000001;
+			remoteInfo = MerchAds;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXGroup section */
+		PA000000000000000000000A = {
+			isa = PBXGroup;
+			children = (
+				PA000000000000000000000D /* MerchAds */,
+				PT000000000000000000000D /* MerchAdsTests */,
+				PA000000000000000000000B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		PA000000000000000000000B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				PA000000000000000000000C /* MerchAds.app */,
+				PT000000000000000000000C /* MerchAdsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		PA0000000000000000000001 /* MerchAds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = PA0000000000000000000020 /* Build configuration list for PBXNativeTarget "MerchAds" */;
+			buildPhases = (
+				PA0000000000000000000002 /* Sources */,
+				PA0000000000000000000003 /* Frameworks */,
+				PA0000000000000000000004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				PA000000000000000000000D /* MerchAds */,
+			);
+			name = MerchAds;
+			packageProductDependencies = (
+			);
+			productName = MerchAds;
+			productReference = PA000000000000000000000C /* MerchAds.app */;
+			productType = "com.apple.product-type.application";
+		};
+		PT0000000000000000000001 /* MerchAdsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = PT0000000000000000000020 /* Build configuration list for PBXNativeTarget "MerchAdsTests" */;
+			buildPhases = (
+				PT0000000000000000000002 /* Sources */,
+				PT0000000000000000000003 /* Frameworks */,
+				PT0000000000000000000004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				PT0000000000000000000008 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				PT000000000000000000000D /* MerchAdsTests */,
+			);
+			name = MerchAdsTests;
+			packageProductDependencies = (
+			);
+			productName = MerchAdsTests;
+			productReference = PT000000000000000000000C /* MerchAdsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		PA00000000000000000000FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					PA0000000000000000000001 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					PT0000000000000000000001 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = PA0000000000000000000001;
+					};
+				};
+			};
+			buildConfigurationList = PA0000000000000000000010 /* Build configuration list for PBXProject "MerchAds" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = PA000000000000000000000A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = PA000000000000000000000B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				PA0000000000000000000001 /* MerchAds */,
+				PT0000000000000000000001 /* MerchAdsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		PA0000000000000000000004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PT0000000000000000000004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		PA0000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PT0000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		PT0000000000000000000008 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = PA0000000000000000000001 /* MerchAds */;
+			targetProxy = PT0000000000000000000007 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		PA0000000000000000000011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		PA0000000000000000000012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		PA0000000000000000000021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MerchAds/Info.plist;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.2.2;
+				INFOPLIST_KEY_CFBundleDisplayName = "Merch Ads";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.zdufs.MerchAds;
+				PRODUCT_NAME = "Merch Ads";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		PA0000000000000000000022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MerchAds/Info.plist;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.2.2;
+				INFOPLIST_KEY_CFBundleDisplayName = "Merch Ads";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.zdufs.MerchAds;
+				PRODUCT_NAME = "Merch Ads";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		PT0000000000000000000021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.zdufs.MerchAdsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Merch Ads.app/Contents/MacOS/Merch Ads";
+			};
+			name = Debug;
+		};
+		PT0000000000000000000022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.zdufs.MerchAdsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Merch Ads.app/Contents/MacOS/Merch Ads";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		PA0000000000000000000010 /* Build configuration list for PBXProject "MerchAds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				PA0000000000000000000011 /* Debug */,
+				PA0000000000000000000012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		PA0000000000000000000020 /* Build configuration list for PBXNativeTarget "MerchAds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				PA0000000000000000000021 /* Debug */,
+				PA0000000000000000000022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		PT0000000000000000000020 /* Build configuration list for PBXNativeTarget "MerchAdsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				PT0000000000000000000021 /* Debug */,
+				PT0000000000000000000022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = PA00000000000000000000FF /* Project object */;
+}
