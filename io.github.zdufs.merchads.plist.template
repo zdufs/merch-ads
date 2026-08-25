@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>io.github.zdufs.merchads</string>
+    <!-- The script runs the code beside it, and writes to the data folder named
+         below. In a checkout the two are the same folder; when the script comes
+         from the app bundle they are not, and MERCHADS_DATA_DIR is the only
+         thing that says where the databases live. launchd starts the job with
+         almost no environment, so it has to be stated here. -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>__ADS_SCRIPT__</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>MERCHADS_DATA_DIR</key>
+        <string>__ADS_DATA__</string>
+    </dict>
+    <!-- Daily, on THIS COMPUTER'S clock — launchd understands no other.
+         Both numbers are rewritten by scripts/install_launchd.sh, which
+         computes them from 01:00 MERCH TIME (Seattle, America/Los_Angeles),
+         so edit them there with --hour rather than here.
+
+         Seattle is the right clock for every marketplace: daily_metrics.py
+         anchors "yesterday" and the month boundary to Pacific for EVERY
+         market, so Amazon's ad calendar means the same date wherever the job
+         runs. 01:00 there is one hour after that day closes, which is what
+         makes "yesterday" mean the day that just finished. The 10 below is
+         only what that happens to be in Central Europe. See docs/SETUP.md. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>10</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>RunAtLoad</key>
+    <false/>
+    <key>StandardOutPath</key>
+    <string>__ADS_DATA__/outputs/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>__ADS_DATA__/outputs/launchd.err.log</string>
+</dict>
+</plist>

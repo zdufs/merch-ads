@@ -1,0 +1,74 @@
+# Secrets — never commit
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Local data / logs / generated outputs
+*.sqlite
+*.db
+*.log
+outputs/
+KILL
+NO_DISCORD
+
+# MerchFlow catalog exports (multi-GB, regenerated daily)
+export_products_*.csv
+
+# Xcode / app build products
+build/
+DerivedData/
+MerchAds.app/
+Merch Ads.app/
+*.xcuserdatad/
+xcuserdata/
+.DS_Store
+dist/
+
+# User-authored DSL rules (data, not code)
+rule_defs/
+# Their safety net: the whole rule set — index and every rule's text — rewritten
+# on each save. rules.store restores rule_defs/ from it when the directory goes
+# missing, so it lives OUTSIDE that directory and stays untracked.
+rule_defs.backup.json
+
+# KDP per-book economics config (user data)
+kdp_books.json
+
+# Merch royalty overrides — the royalties you edit in the app's Product
+# Royalty tab. Your numbers, merged over the built-in tables in products.py.
+royalty_overrides.json
+
+# KDP campaign-builder operator config (held-out openers, pen names)
+kdp_config.json
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# Fetched KDP book titles cache (regenerable via appctl kdp-titles --refresh)
+kdp_titles.json
+
+# Operator data — your own catalog, not code. Seeded from the shipped
+# *.example.* files on first use. Keep these out of the repo.
+seasonal.json
+# The tag map's safety net, written on every save that has tags. It is what
+# seasonal_pause.load_config() restores from when the config goes missing, so it
+# must be untracked from birth — a `git rm` on a TRACKED seasonal.json is what
+# emptied the real one on 2026-08-15.
+seasonal.backup.json
+# Campaign launch lists: real ASINs, one row per design you are launching.
+*_launches.csv
+!*_launches.example.csv
+
+# Database backups and any SUFFIXED copy of one. `*.sqlite` only matches a file
+# whose EXTENSION is .sqlite, so `stream_data.sqlite.corrupt-2026-08-22` slipped
+# straight past it and 20 MB of live ad data was committed on 2026-08-22 before
+# anyone pushed. Both shapes are covered now, and so is the folder they live in.
+backups/
+*.sqlite.*
+*.sqlite-*.*
+
+# Xcode coverage artifact, dropped in the repo root by `xcodebuild test`
+*.profraw

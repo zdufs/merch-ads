@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- The app icon ships as a legacy .icns, not as an asset-catalog AppIcon.
+	     An asset-catalog icon sets CFBundleIconName, and macOS 26 then draws
+	     the icon on its light "platter", which shows as a grey rim around our
+	     white tile. Xcode ignores INFOPLIST_KEY_CFBundleIconFile, so the key
+	     lives here and the rest of the Info.plist is still generated. -->
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+</dict>
+</plist>

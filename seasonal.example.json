@@ -1,0 +1,120 @@
+{
+  "_doc": "Seasonal design scheduler. Each season has a recurring yearly ACTIVE window [resume..pause] as MM-DD; a tagged design's ad groups are ENABLED inside the window and paused outside it. 'resume' is set ~2 MONTHS before the holiday so shoppers see (and Amazon ranks) the designs well ahead of demand; 'pause' is a few days after. 'keywords' auto-detect matching designs by title (see appctl season-suggest). 'asins' maps a design's ASIN to a season key. Edit via the app (Seasonal screen) or appctl season-tag / season-define.",
+  "seasons": {
+    "valentines": {
+      "label": "Valentine's Day",
+      "resume": "12-14",
+      "pause": "02-16",
+      "keywords": [
+        "valentine",
+        "valentines",
+        "galentine",
+        "cupid"
+      ]
+    },
+    "stpatricks": {
+      "label": "St. Patrick's Day",
+      "resume": "01-17",
+      "pause": "03-19",
+      "keywords": [
+        "st patrick",
+        "st. patrick",
+        "saint patrick",
+        "patrick's day",
+        "patricks day",
+        "shamrock"
+      ]
+    },
+    "easter": {
+      "label": "Easter",
+      "resume": "02-05",
+      "pause": "04-22",
+      "keywords": [
+        "easter",
+        "easter bunny"
+      ]
+    },
+    "mothersday": {
+      "label": "Mother's Day",
+      "resume": "03-11",
+      "pause": "05-13",
+      "keywords": [
+        "mother's day",
+        "mothers day",
+        "mother\u2019s day"
+      ]
+    },
+    "fathersday": {
+      "label": "Father's Day",
+      "resume": "04-15",
+      "pause": "06-17",
+      "keywords": [
+        "father's day",
+        "fathers day",
+        "father\u2019s day"
+      ]
+    },
+    "juneteenth": {
+      "label": "Juneteenth",
+      "resume": "04-19",
+      "pause": "06-21",
+      "keywords": [
+        "juneteenth"
+      ]
+    },
+    "july4": {
+      "label": "Independence Day",
+      "resume": "05-04",
+      "pause": "07-07",
+      "keywords": [
+        "4th of july",
+        "fourth of july",
+        "july 4th",
+        "independence day"
+      ]
+    },
+    "halloween": {
+      "label": "Halloween",
+      "resume": "08-31",
+      "pause": "11-02",
+      "keywords": [
+        "halloween",
+        "spooky",
+        "trick or treat",
+        "spooky season"
+      ]
+    },
+    "thanksgiving": {
+      "label": "Thanksgiving",
+      "resume": "09-26",
+      "pause": "12-01",
+      "keywords": [
+        "thanksgiving",
+        "turkey day"
+      ]
+    },
+    "christmas": {
+      "label": "Christmas",
+      "resume": "10-25",
+      "pause": "12-27",
+      "keywords": [
+        "christmas",
+        "xmas",
+        "santa",
+        "merry christmas",
+        "reindeer"
+      ]
+    },
+    "newyear": {
+      "label": "New Year",
+      "resume": "11-01",
+      "pause": "01-03",
+      "keywords": [
+        "new year",
+        "new years",
+        "happy new year"
+      ]
+    }
+  },
+  "asins": {}
+}

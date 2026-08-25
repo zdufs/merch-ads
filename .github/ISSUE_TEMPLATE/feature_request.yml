@@ -1,0 +1,45 @@
+name: Feature request
+description: Suggest something new.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the **problem** first. A feature that solves a problem I can
+        picture has a far better chance than a feature described only as a solution.
+
+        If the thing you want is a different automation decision, check
+        [rules-dsl.md](../blob/main/docs/rules-dsl.md) first — the Rules DSL exists so you
+        can write your own logic without changing the engine.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you hitting?
+      placeholder: "Every night I have to manually ... because the engine cannot ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like it to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+      description: Including whether a DSL rule could do it, and why it could not.
+
+  - type: dropdown
+    id: markets
+    attributes:
+      label: Does this apply to all markets, or one?
+      options:
+        - All markets
+        - US only
+        - EU markets only
+        - KDP / books only
+        - Not sure

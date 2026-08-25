@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>io.github.zdufs.merchads.stream</string>
+    <!-- Same split as the nightly: the script runs the code beside it and
+         writes to the data folder named below. launchd starts a job with almost
+         no environment, so the data folder has to be stated here. -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>__ADS_SCRIPT__</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>MERCHADS_DATA_DIR</key>
+        <string>__ADS_DATA__</string>
+    </dict>
+    <!-- Every hour. StartInterval rather than 24 StartCalendarInterval entries,
+         because the exact minute does not matter: Amazon publishes an hour
+         behind and the queue holds 14 days. -->
+    <key>StartInterval</key>
+    <integer>3600</integer>
+    <!-- Drain once on load too, so installing it does not wait an hour to prove
+         it works. -->
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>__ADS_DATA__/outputs/launchd.stream.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>__ADS_DATA__/outputs/launchd.stream.err.log</string>
+</dict>
+</plist>
